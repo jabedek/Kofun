@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "assets/styles/scss-globals.scss";
+@import "assets/styles/tailwind-globals.scss";
+@import "assets/styles/scrollbar.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -21,5 +29,4 @@ a {
 
 body {
   margin: 0;
-  font-family: vars.$global-font-family;
 }

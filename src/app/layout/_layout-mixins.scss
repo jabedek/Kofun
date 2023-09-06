@@ -1,0 +1,41 @@
+@mixin main-layout-width() {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 660px) {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 540px) {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 414px) {
+    max-width: 414px;
+    margin: 0 auto;
+  }
+}
+
+@mixin page() {
+  background: gray;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: calc(variables.$header-height + 10px);
+  position: relative;
+}

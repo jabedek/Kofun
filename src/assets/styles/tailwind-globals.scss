@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .app_flex_center {
+    @apply flex justify-center items-center content-center;
+  }
+
+  .app_layout_padding {
+    @apply px-[6vw] sm:px-[6vw] md:px-[6vw] mdx:px-[6vw] lg:px-[10vw] xl:px-[14vw] 2xl:px-[16vw];
+  }
+
+  .app_input_disabled {
+    @apply bg-gray-100 border-b-gray-100 text-gray-500;
+  }
+
+  .app_input_invalid {
+    @apply text-red-700 focus:border-b-red-500;
+  }
+}
+
+@layer components {
+  // ## Regular input ##
+  .app_input_top {
+    // this has to match 'app_input_label' below.
+    @apply top-4;
+  }
+
+  .app_input {
+    @apply transition-app_input_border duration-200 
+    font-app_primary font-normal text-gray-900 text-[16px]
+    placeholder-transparent 
+    cursor-pointer shadow-none rounded-none 
+    min-h-[40px] h-[40px] w-auto px-0  
+    border-0 border-b-2 border-b-gray-300 
+    disabled:bg-gray-100 disabled:border-b-gray-100 disabled:text-gray-500   
+    focus:ring-0 focus:border-b-app_tertiary focus:ring-app_tertiary focus:outline-none 
+    invalid:text-red-700 focus:invalid:border-b-red-500;
+  }
+
+  .app_input_label {
+    // '-top-4' has to match 'app_input_top' above.
+    @apply transition-all duration-200 
+    absolute left-0 -top-4 
+    cursor-pointer select-none  
+    text-[12px] text-gray-600  font-normal font-app_primary 
+    peer-placeholder-shown:text-[12px]  peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 
+    peer-focus:-top-4 peer-focus:text-gray-600 peer-focus:text-[12px] 
+    peer-required:after:content-['*'];
+  }
+
+  .app_input_info {
+    @apply transition-all duration-200 absolute right-0 bottom-[0.1em] text-[.62rem] tracking-[-.4px] font-app_mono text-black;
+  }
+
+  // ## Date input ##
+  .app_input_info_date {
+    @apply transition-all duration-200  text-[.62rem] tracking-[-.4px] font-app_mono text-black;
+  }
+
+  // ## Checkbox input ##
+  .app_input_checkbox {
+    @apply transition-app_input_border duration-200  font-app_primary shadow-none cursor-pointer  h-6 w-6 focus:ring-0 px-0   font-normal focus:border-app_tertiary focus:ring-app_tertiary text-app_secondary rounded-[4px] mr-2 focus:outline-none placeholder-gray-300 
+    disabled:bg-gray-100 disabled:border-gray-100 disabled:text-gray-500  border-2 border-gray-300  invalid:text-red-700 focus:invalid:border-red-500;
+  }
+
+  .app_input_checkbox_title {
+    @apply transition-all whitespace-pre  duration-200 font-app_primary text-gray-600 peer-placeholder-shown:text-base text-sm  font-normal peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-4
+    peer-focus:text-gray-600 peer-focus:text-sm select-none;
+  }
+
+  .app_input_label_option_checkbox {
+    @apply transition-all whitespace-pre  duration-200 font-app_primary text-gray-600 peer-placeholder-shown:text-base text-base  font-normal peer-placeholder-shown:text-gray-500
+       peer-required:after:content-['*'] uppercase;
+  }
+
+  // ## Radio input ##
+  .app_radios_title {
+    @apply transition-all whitespace-pre  duration-200 font-app_primary text-gray-600 peer-placeholder-shown:text-base text-sm  font-normal peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-4
+    peer-focus:text-gray-600 peer-focus:text-sm select-none;
+  }
+
+  .app_input_radio {
+    @apply duration-200  font-app_primary shadow-none   h-6 w-6 ring-2 px-0   font-normal focus:border-b-app_tertiary  ring-gray-300 focus:ring-app_tertiary text-app_secondary rounded-full mr-2  placeholder-gray-300 
+     disabled:text-gray-500 disabled:bg-gray-100 disabled:ring-gray-100 cursor-pointer border-0  invalid:text-red-700 focus:invalid:border-b-red-500;
+  }
+
+  .app_input_label_radio {
+    @apply transition-all whitespace-pre peer-disabled:text-gray-500 cursor-pointer  duration-200 font-app_primary text-gray-600 peer-placeholder-shown:text-base text-base  font-normal peer-placeholder-shown:text-gray-500;
+  }
+
+  // ## Label (no input, just info) ##
+  .app_label {
+    @apply transition-all duration-200 font-app_primary text-gray-600 text-sm  font-normal select-none;
+  }
+
+  .app_form_button {
+    @apply transition-all duration-200 font-app_primary h-[32px] px-[32px] cursor-pointer rounded-[5px] uppercase focus-visible:outline-none outline-none border-gray-400 border-opacity-50 border-[1px];
+  }
+}

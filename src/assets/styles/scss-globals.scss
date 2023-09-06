@@ -1,0 +1,21 @@
+// Input Label
+.app_input_label.required.after\:pl-1::after {
+  content: "*" !important;
+}
+
+.app_ellipsis,
+.app_ellipsis_inline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: break-spaces;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-break: loose;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.app_ellipsis_inline {
+  -webkit-line-clamp: 1;
+}

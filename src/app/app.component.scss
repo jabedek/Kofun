@@ -1,0 +1,25 @@
+// @use "/src/assets/styles/global/shadows";
+// @use "/src/assets/styles/global/mixins";
+// @use "/src/assets/styles/global/variables" as vars;
+// @use "/src/assets/styles/global/colors";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.version {
+  position: fixed;
+  bottom: 5px;
+  left: 10px;
+  // background: colors.$white-normal;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  // box-shadow: shadows.$box-shadow-gray;
+  font-size: 0.95rem;
+  // font-family: vars.$mono-font;
+  font-weight: 300;
+}
