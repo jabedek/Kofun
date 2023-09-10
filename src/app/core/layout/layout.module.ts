@@ -18,6 +18,6 @@ import { RouterModule } from '@angular/router';
     // StoreModule.forFeature(featureKey, featureState),
     // EffectsModule.forFeature([LayoutEffects]),
   ],
-  exports: [MainLayoutComponent],
+  exports: [MainLayoutComponent, FooterComponent, HeaderComponent, SidebarComponent],
 })
 export class LayoutModule {}

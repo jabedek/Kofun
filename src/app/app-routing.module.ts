@@ -1,25 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { routesX } from '@static/static-pages-routing.module';
+import { staticPagesRoutes } from '@features/static-pages/static-pages-routing.module';
 
 const routes: Routes = [
-  ...routesX,
-  // {
-  //   path: '',
-
-  //   // canActivate: [AuthGuard],
-  //   loadChildren: () => import('@static/static-pages.module').then((m) => m.StaticPagesModule),
-  // },
-
+  ...staticPagesRoutes,
   {
     path: 'account',
     // canActivate: [AuthGuard],
     loadChildren: () => import('@features/account/account.module').then((m) => m.AccountModule),
   },
   {
-    path: 'fundraiser',
+    path: 'fundraising',
     // canActivate: [AuthGuard],
-    loadChildren: () => import('@features/fundraiser/fundraiser.module').then((m) => m.FundraiserModule),
+    loadChildren: () => import('@features/fundraising/fundraising.module').then((m) => m.FundraisingModule),
+  },
+  {
+    path: 'debts',
+    // canActivate: [AuthGuard],
+    loadChildren: () => import('@features/debts/debts.module').then((m) => m.DebtsModule),
   },
 ];
 

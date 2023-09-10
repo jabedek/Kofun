@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainLayoutComponent } from '@layout/components/main-layout/main-layout.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { MainLayoutComponent } from '@core/layout/components/main-layout/main-layout.component';
 
-export const routesX: Routes = [
+export const staticPagesRoutes: Routes = [
   {
     path: '',
     component: MainLayoutComponent,
@@ -25,7 +25,7 @@ export const routesX: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routesX)],
+  imports: [RouterModule.forChild(staticPagesRoutes)],
   exports: [RouterModule],
 })
 export class StaticPagesRoutingModule {}
